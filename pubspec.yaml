@@ -1,0 +1,42 @@
+name: awra_spin_wheel
+description: "Awra Spin Wheel - Premium lottery game"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Firebase
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  cloud_firestore: ^5.6.5
+
+  # State management
+  provider: ^6.1.2
+
+  # UI
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+
+  # Utils
+  intl: ^0.19.0
+  uuid: ^4.5.1
+  flutter_riverpod: ^3.1.0
+  riverpod_annotation: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.12.2
+  riverpod_generator: ^4.0.0+1
+
+flutter:
+  uses-material-design: true
