@@ -1,7 +1,6 @@
 name: Deploy to Firebase Hosting on PR
 on: pull_request
 permissions:
-  checks: write
   contents: read
   pull-requests: write
 
@@ -18,11 +17,10 @@ jobs:
           cache: true
 
       - run: flutter pub get
-      - run: flutter build web
+      - run: flutter build web --release
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AWRA_SPINWHEEL }}
           projectId: awra-spinwheel
-          
